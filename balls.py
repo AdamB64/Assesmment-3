@@ -22,7 +22,15 @@ class goldenssnitch(ball):
 
     def movement(self):
         self.movement = random.randint(0,3)
-        return self.movement
+        if self.movement==1:
+            self.col+1
+        elif self.movement==2:
+            self.col-1
+        elif self.movement==3:
+            self.row+1
+        else :
+            self.row-1
+        return self.row,self.col
 
 class Bludgers(ball):
     def __init__(self, rows, cols, chars):
