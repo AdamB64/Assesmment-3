@@ -1,8 +1,17 @@
 from setuptools import Command
 from field import field
 from players import player
+from balls import ball,quaffle,goldenssnitch,Bludgers
 
 f = field()
+
+g=goldenssnitch(8,3,"G")
+g1=g.getChar()
+g2=g.getRow()
+g3=g.getCol()
+
+f.placeball(g1,g3,g2)
+
 
 p1 = player(1,1,"v",0)
 p2 = player(5,1,"R",0)
@@ -60,7 +69,7 @@ if f.canMove(x+1,y) == True and command =="D":
     #function to move the x axis down 
     x= r.moveDown()
     #function to place the rat on the maze
-    f.placeRat(play[count-1].getChar,x,y)
+    f.placePlayer(play[count-1].getChar,x,y)
 # a elif that says if not able to move in that direction tell user
 elif f.canMove(x+1,y) == False and command =="D":
     print("\nCant go that way pick another direction")
@@ -77,7 +86,7 @@ if f.canMove(x-1,y) == True and command == "U":
     #function to move the x axis up
     x =r.moveUp()
     #function to place the rat on the maze
-    f.placeRat(play[count-1].getChar,x,y)
+    f.placePlayer(play[count-1].getChar,x,y)
 # a elif that says if not able to move in that direction tell user
 elif f.canMove(x-1,y) == False and command == "U":
     print("\nCant go that way, pick another direction")
@@ -94,7 +103,7 @@ if f.canMove(x,y-1) == True and command =="L":
     #function to move the x axis left
     y = r.moveLeft()
     #function to place the rat on the maze
-    f.placeRat(play[count-1].getChar,x,y)
+    f.placePlayer(play[count-1].getChar,x,y)
 # a elif that says if not able to move in that direction tell user
 elif f.canMove(x,y-1) ==False and command =="L":
     print("\nCant go that way, pick another direction")
@@ -111,7 +120,7 @@ if f.canMove(x,y+1) == True and command == "R":
     #function to move the x axis right
     y = r.moveRight()
     #function to place the rat on the maze
-    f.placeRat(play[count-1].getChar,x,y)
+    f.placePlayer(play[count-1].getChar,x,y)
 # a elif that says if not able to move in that direction tell user
 elif f.canMove(x,y+1) == False and command =="R":
     print("\nCant go that way, pick another direction")

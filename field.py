@@ -5,13 +5,13 @@ class field:
         """The Maze constructor
         (none) -> none
         start by declaring attributes"""
-        self.field = [['#','#','#','#','#','#','#'],
-                     ['#',' ','#',' ',' ',' ','#'],
-                     ['#',' ','#',' ',' ',' ','#'],
-                     ['#',' ',' ','@',' ','#','#'],      
-                     ['#',' ','#',' ',' ',' ','#'],
-                     ['#',' ','#',' ',' ',' ','#'],
-                     ['#','#','#','#','#','#','#']]
+        self.field = [['#','#','#','#','#','#','#','#','#','#','#'],
+                     ['#',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+                     ['#',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+                     ['#',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],      
+                     ['#',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+                     ['#',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+                     ['#','#','#','#','#','#','#','#','#','#','#']]
         self.height = 7
         self.width = 7
 
@@ -25,6 +25,9 @@ class field:
 
     def placePlayer (self, Pla_char, row, column):
         self.field[row][column] = Pla_char
+
+    def placeball(self,ba_char,bal_row,bal_col):
+        self.field[bal_row][bal_col]=ba_char
                 
 
     def clearAtPos(self, row, col):

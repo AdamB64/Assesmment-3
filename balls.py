@@ -9,11 +9,20 @@ class goldenssnitch(ball):
     def __init__(self, rows, cols, chars):
         super().__init__(rows, cols, chars)
         self.movement=None
-        self.caught
+        self.caught=False
 
     def movement(self):
         self.movement = random.randint(0,3)
         return self.movement
+    
+    def getChar(self,):
+        return self.char
+
+    def getRow(self):
+        return self.row
+
+    def getCol(self):
+        return self.col
 
 class Bludgers(ball):
     def __init__(self, rows, cols, chars):
@@ -24,4 +33,4 @@ class quaffle(ball):
     def __init__(self, rows, cols, chars):
         super().__init__(rows, cols, chars)
         self.movement =None
-        self.caught
+        self.caught=False
