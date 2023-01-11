@@ -12,11 +12,9 @@ g3=g.getCol()
 
 f.placeball(g1,g3,g2)
 
-
 p1 = player(1,1,"v",0)
 p2 = player(5,1,"R",0)
 play = [p1,p2]
-#print(r.toString())
 
 c = play[0].getChar()
 x = play[0].getRow()
@@ -29,17 +27,14 @@ a =play[1].getRow()
 b =play[1].getCol()
 
 f.placePlayer(r,a,b)
-#print(m.toString())
-#print(m.canMove(3,4)) #true
-#print(m.canMove(3,6)) #false
+
 
 print(f.toString())
-
 
 p=True
 r = None
 count = 1
-while g.caught ==False:
+while g.caught ==False & (p1.ate>=100 or p2.ate>=100):
     if count == 1:
         r = p1
         print("Player 1")

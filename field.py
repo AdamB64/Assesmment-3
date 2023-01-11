@@ -20,8 +20,8 @@ class field:
         for i in range (0, len(self.field)):
             for j in self.field[i]:
                 printme = printme + j
-            printme = printme + "\n"
-        return printme
+            printme = printme +"\n"
+        return printme 
 
     def placePlayer (self, Pla_char, row, column):
         self.field[row][column] = Pla_char

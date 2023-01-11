@@ -4,6 +4,15 @@ class ball:
         self.row = rows
         self.col =cols
         self.char =chars
+    
+    def getChar(self,):
+        return self.char
+
+    def getRow(self):
+        return self.row
+
+    def getCol(self):
+        return self.col
 
 class goldenssnitch(ball):
     def __init__(self, rows, cols, chars):
@@ -14,15 +23,6 @@ class goldenssnitch(ball):
     def movement(self):
         self.movement = random.randint(0,3)
         return self.movement
-    
-    def getChar(self,):
-        return self.char
-
-    def getRow(self):
-        return self.row
-
-    def getCol(self):
-        return self.col
 
 class Bludgers(ball):
     def __init__(self, rows, cols, chars):
