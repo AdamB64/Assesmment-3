@@ -20,16 +20,16 @@ class goldenssnitch(ball):
         self.movement=None
         self.caught=False
 
-    def movement(self):
+    def movements(self):
         self.movement = random.randint(0,3)
         if self.movement==1:
-            self.col+1
+            self.col=self.col+1
         elif self.movement==2:
-            self.col-1
+            self.col =self.col-1
         elif self.movement==3:
-            self.row+1
+            self.row= self.row+1
         else :
-            self.row-1
+            self.row=self.row-1
         return self.row,self.col
 
 class Bludgers(ball):
@@ -42,3 +42,15 @@ class quaffle(ball):
         super().__init__(rows, cols, chars)
         self.movement =None
         self.caught=False
+        
+    def movements(self):
+        self.movement = random.randint(0,3)
+        if self.movement==1:
+            self.col=self.col+1
+        elif self.movement==2:
+            self.col =self.col-1
+        elif self.movement==3:
+            self.row= self.row+1
+        else :
+            self.row=self.row-1
+        return self.row,self.col

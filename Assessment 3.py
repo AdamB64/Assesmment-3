@@ -122,8 +122,8 @@ while g.caught ==False & (p1.ate>=100 or p2.ate>=100):
 #a if statement to check how many sprouts the rat has ate
     if p==True:
         count = count + 1
-    g.movement
-    f.placeball()
+    g.movements()
+    f.placeball(g1,g3,g2)
 
 
 
