@@ -9,6 +9,7 @@ class goldenssnitch(ball):
     def __init__(self, rows, cols, chars):
         super().__init__(rows, cols, chars)
         self.movement=None
+        self.caught
 
     def movement(self):
         self.movement = random.randint(0,3)
@@ -23,3 +24,4 @@ class quaffle(ball):
     def __init__(self, rows, cols, chars):
         super().__init__(rows, cols, chars)
         self.movement =None
+        self.caught
